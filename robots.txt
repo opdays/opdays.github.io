@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://opdays.com/sitemap.xml

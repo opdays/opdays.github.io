@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Fpm打包rpm实战 - YangYang&#39;s Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="yangyang" /><meta name="description" content="1 什么是fpm fpm是一个命令行工具,帮助快速构建rpm包,dpkg包,osxpkg包等&amp;hellip;
+文档：详细文档
+" /><meta name="keywords" content="Hugo, theme, yangyang" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.53 with even 4.0.0" />
+
+
+<link rel="canonical" href="http://opdays.com/post/fpm%E6%89%93%E5%8C%85rpm%E5%AE%9E%E6%88%98/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.a0f8257c.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Fpm打包rpm实战" />
+<meta property="og:description" content="1 什么是fpm
+
+fpm是一个命令行工具,帮助快速构建rpm包,dpkg包,osxpkg包等&hellip;
+
+文档：详细文档" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://opdays.com/post/fpm%E6%89%93%E5%8C%85rpm%E5%AE%9E%E6%88%98/" /><meta property="article:published_time" content="2018-03-05T16:25:45&#43;08:00"/>
+<meta property="article:modified_time" content="2018-03-05T16:25:45&#43;08:00"/>
+
+<meta itemprop="name" content="Fpm打包rpm实战">
+<meta itemprop="description" content="1 什么是fpm
+
+fpm是一个命令行工具,帮助快速构建rpm包,dpkg包,osxpkg包等&hellip;
+
+文档：详细文档">
+
+
+<meta itemprop="datePublished" content="2018-03-05T16:25:45&#43;08:00" />
+<meta itemprop="dateModified" content="2018-03-05T16:25:45&#43;08:00" />
+<meta itemprop="wordCount" content="584">
+
+
+
+<meta itemprop="keywords" content="Linux,工具," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Fpm打包rpm实战"/>
+<meta name="twitter:description" content="1 什么是fpm
+
+fpm是一个命令行工具,帮助快速构建rpm包,dpkg包,osxpkg包等&hellip;
+
+文档：详细文档"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">YangYang</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">YangYang</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Fpm打包rpm实战</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-03-05 </span>
+        <div class="post-category">
+            <a href="/categories/%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/"> 系统运维 </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#1-什么是fpm">1 什么是fpm</a></li>
+<li><a href="#2-centos6-8安装fpm">2 centos6.8安装fpm</a></li>
+<li><a href="#3-制作一个rpm包">3 制作一个rpm包</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="1-什么是fpm">1 什么是fpm</h2>
+
+<p>fpm是一个命令行工具,帮助快速构建rpm包,dpkg包,osxpkg包等&hellip;</p>
+
+<p>文档：<a href="http://fpm.readthedocs.io/en/latest/intro.html">详细文档</a></p>
+
+<h2 id="2-centos6-8安装fpm">2 centos6.8安装fpm</h2>
+
+<ol>
+<li>使用rvm安装ruby<a href="http://blog.csdn.net/qq_14945847/article/details/77986900">Linux在线升级ruby</a></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">yum install -y rpm-build gcc-c++ patch readline readline-devel zlib zlib-devel libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison iconv-devel
+curl -L get.rvm.io <span class="p">|</span> bash -s stable
+<span class="nb">source</span> /etc/profile.d/rvm.sh
+sed -i <span class="s1">&#39;$aruby_url=https://cache.ruby-china.org/pub/ruby&#39;</span> /usr/local/rvm/user/db
+rvm install <span class="m">2</span>.4.1</code></pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>更换gem源<a href="https://gems.ruby-china.org/">RubyGems</a></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
+gem sources -l
+https://gems.ruby-china.org
+<span class="c1"># 确保只有 gems.ruby-china.org</span></code></pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>下载fpm</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">gem install fpm</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="3-制作一个rpm包">3 制作一个rpm包</h2>
+
+<p>制作一个rpm包安装之后在/usr/bin/目录下安装一个命令rpmtest</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">mkdir rpmbuild
+
+<span class="nb">cd</span> rpmbuild
+
+<span class="c1">#rpmbuild 相当于安装的根</span>
+
+mkdir -p usr/bin 
+
+<span class="nb">echo</span> <span class="s2">&#34;echo rpmtest&#34;</span> &gt;&gt; usr/bin/rpmtest <span class="o">&amp;&amp;</span> chmod +x usr/bin/rpmtest
+
+fpm -s dir -t rpm -n rpmtest -v <span class="m">0</span>.0.1 -C .
+
+Created package <span class="o">{</span>:path<span class="o">=</span>&gt;<span class="s2">&#34;rpmtest-0.0.1-1.x86_64.rpm&#34;</span><span class="o">}</span>
+
+rpm -ivh rpmtest-0.0.1-1.x86_64.rpm
+Preparing...                <span class="c1">########################################### [100%]</span>
+<span class="m">1</span>:rpmtest                <span class="c1">########################################### [100%]</span>
+
+rpmtest
+rpmtest
+
+rpm -qf /usr/bin/rpmtest
+rpmtest-0.0.1-1.x86_64
+
+
+rpm -ql rpmtest-0.0.1-1.x86_64
+/usr/bin/rpmtest
+
+<span class="c1">#卸载</span>
+yum remove rpmtest</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html">-s          指定源类型
+-t          指定目标类型，即想要制作为什么包
+-n          指定包的名字
+-v          指定包的版本号
+-C          指定打包的相对路径  Change directory to here before searching forfiles
+-d          指定依赖于哪些包
+-f          第二次打包时目录下如果有同名安装包存在，则覆盖它
+-p          输出的安装包的目录，不想放在当前目录下就需要指定
+--post-install      软件包安装完成之后所要运行的脚本；同--after-install
+--pre-install       软件包安装完成之前所要运行的脚本；同--before-install
+--post-uninstall    软件包卸载完成之后所要运行的脚本；同--after-remove
+--pre-uninstall     软件包卸载完成之前所要运行的脚本；同--before-remove</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">yangyang</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2018-03-05</span>
+  </p>
+  
+  
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/linux/">Linux</a>
+          <a href="/tags/%E5%B7%A5%E5%85%B7/">工具</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/websocket%E5%AE%9E%E7%8E%B0k8s%E5%AE%B9%E5%99%A8%E7%BB%88%E7%AB%AF/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Websocket实现k8s容器终端</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/python/python3.5%E6%96%B0%E8%AF%AD%E6%B3%95/">
+            <span class="next-text nav-default">python3.5新语法</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/opdays" class="iconfont icon-github" title="github"></a>
+  <a href="http://opdays.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">yangyang</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Linux技巧积累 - YangYang&#39;s Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="yangyang" /><meta name="description" content="1 系统运维服务器故障排查 统计服务器tcp连接状态数
+1 2  ss -ant|awk &amp;#39;{a[$1]&#43;&#43;}END{for(i in a)print a[i],i}&amp;#39; # 记住a为awk关联数组 索引为$1 值为数量，for(i in a)用索引遍历数组 i为索引a[i]为 i出现的次数  " /><meta name="keywords" content="Hugo, theme, yangyang" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.53 with even 4.0.0" />
+
+
+<link rel="canonical" href="http://opdays.com/post/linux%E6%8A%80%E5%B7%A7%E7%A7%AF%E7%B4%AF/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.a0f8257c.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Linux技巧积累" />
+<meta property="og:description" content="1 系统运维服务器故障排查
+
+统计服务器tcp连接状态数
+
+
+1
+2
+
+
+ss -ant|awk &#39;{a[$1]&#43;&#43;}END{for(i in a)print a[i],i}&#39;
+# 记住a为awk关联数组 索引为$1 值为数量，for(i in a)用索引遍历数组 i为索引a[i]为 i出现的次数
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://opdays.com/post/linux%E6%8A%80%E5%B7%A7%E7%A7%AF%E7%B4%AF/" /><meta property="article:published_time" content="2017-12-25T15:13:00&#43;08:00"/>
+<meta property="article:modified_time" content="2017-12-25T15:13:00&#43;08:00"/>
+
+<meta itemprop="name" content="Linux技巧积累">
+<meta itemprop="description" content="1 系统运维服务器故障排查
+
+统计服务器tcp连接状态数
+
+
+1
+2
+
+
+ss -ant|awk &#39;{a[$1]&#43;&#43;}END{for(i in a)print a[i],i}&#39;
+# 记住a为awk关联数组 索引为$1 值为数量，for(i in a)用索引遍历数组 i为索引a[i]为 i出现的次数
+
+">
+
+
+<meta itemprop="datePublished" content="2017-12-25T15:13:00&#43;08:00" />
+<meta itemprop="dateModified" content="2017-12-25T15:13:00&#43;08:00" />
+<meta itemprop="wordCount" content="480">
+
+
+
+<meta itemprop="keywords" content="Linux,工具," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Linux技巧积累"/>
+<meta name="twitter:description" content="1 系统运维服务器故障排查
+
+统计服务器tcp连接状态数
+
+
+1
+2
+
+
+ss -ant|awk &#39;{a[$1]&#43;&#43;}END{for(i in a)print a[i],i}&#39;
+# 记住a为awk关联数组 索引为$1 值为数量，for(i in a)用索引遍历数组 i为索引a[i]为 i出现的次数
+
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">YangYang</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">YangYang</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Linux技巧积累</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2017-12-25 </span>
+        <div class="post-category">
+            <a href="/categories/%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/"> 系统运维 </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#1-系统运维服务器故障排查">1 系统运维服务器故障排查</a></li>
+<li><a href="#2-服务器安全">2 服务器安全</a></li>
+<li><a href="#3-脚本技巧">3 脚本技巧</a></li>
+<li><a href="#4-qcow2的虚拟机镜像扩容">4 qcow2的虚拟机镜像扩容</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h1 id="1-系统运维服务器故障排查">1 系统运维服务器故障排查</h1>
+
+<p><strong>统计服务器tcp连接状态数</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ss -ant<span class="p">|</span>awk <span class="s1">&#39;{a[$1]++}END{for(i in a)print a[i],i}&#39;</span>
+<span class="c1"># 记住a为awk关联数组 索引为$1 值为数量，for(i in a)用索引遍历数组 i为索引a[i]为 i出现的次数</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><strong>查看nginx日志path访问前20名</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">cat /usr/local/nginx/logs/hugo.log<span class="p">|</span>awk <span class="s1">&#39;{print $7}&#39;</span><span class="p">|</span>awk -F? <span class="s1">&#39;{a[$1]++}END{for(i in a)print i,a[i]}&#39;</span><span class="p">|</span>sort -k <span class="m">2</span> -nr<span class="p">|</span>head -n <span class="m">20</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><strong>lvm给根扩容 /dev/sdb 盘加到根</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">pvcreate /dev/sdb
+vgextend vg_templet /dev/sdb
+lvextend -l +100%FREE /dev/vg_templet/lv_root
+resize2fs /dev/vg_templet/lv_root</code></pre></td></tr></table>
+</div>
+</div>
+<p>随机密码生成</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">pwgen -y10 <span class="m">16</span> <span class="m">200</span>
+
+openssl rand -hex <span class="m">10</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>ps 自定义格式 psr意思为进程运行在运行在哪个cpu上</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ps -eo %cpu o%mem opsr,pid,ppid,start_time,user,time,cmd --sort %cpu</code></pre></td></tr></table>
+</div>
+</div>
+<p>高级linux分区parted</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">parted /dev/vdb mklabel GPT
+parted /dev/vdb mkpart vdb1 <span class="m">1</span> <span class="m">100</span>%</code></pre></td></tr></table>
+</div>
+</div>
+<p>查看进程号$pid打开的文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">lsof -p <span class="nv">$pid</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>系统资源监控sysstat包</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sar -n DEV <span class="m">1</span> <span class="m">5</span> 监控网卡
+sar -u <span class="m">1</span> <span class="m">5</span> 监控cpu
+sar -d <span class="m">1</span> <span class="m">3</span> 监控块设备
+sar -r <span class="m">1</span> <span class="m">3</span> 监控内存</code></pre></td></tr></table>
+</div>
+</div>
+<hr />
+
+<h1 id="2-服务器安全">2 服务器安全</h1>
+
+<p>iptables防护常用配置</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">iptables</code></pre></td></tr></table>
+</div>
+</div>
+<h1 id="3-脚本技巧">3 脚本技巧</h1>
+
+<p><code>xargs</code></p>
+
+<p><code>exec</code>
+<code>set</code></p>
+
+<h1 id="4-qcow2的虚拟机镜像扩容">4 qcow2的虚拟机镜像扩容</h1>
+
+<p>直接扩展磁盘镜像</p>
+
+<p>先关机</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">qemu-img resize centos6.8.xm +500G
+qemu-img info centos6.8.xm</code></pre></td></tr></table>
+</div>
+</div>
+<p>然后启动系统,下面的看情况分区lvm的例子如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">fdisk -l
+fdisk /dev/sda <span class="c1">#给磁盘新加的分区</span>
+如果原来有/dev/sda1 /dev/sda2 就分区3
+n
+<span class="m">3</span>
+w</code></pre></td></tr></table>
+</div>
+</div>
+<p>需要重启</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">vgextend vggroup /dev/sda3 <span class="c1">#分区3加入名字为vggroup的vg组</span>
+lvextend -l +100%FREE /dev/vggroup/vl_root
+resize2fs /dev/vggroup/vl_root <span class="c1">#重置文件系统</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>学习资料</p>
+
+<p><a href="http://zh-google-styleguide.readthedocs.io/en/latest/google-shell-styleguide/contents/">google shell编程风格</a></p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">yangyang</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2017-12-25</span>
+  </p>
+  
+  
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/linux/">Linux</a>
+          <a href="/tags/%E5%B7%A5%E5%85%B7/">工具</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/golang/golang%E6%8A%80%E5%B7%A7%E7%A7%AF%E7%B4%AF/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">golang编译技巧</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/opdays" class="iconfont icon-github" title="github"></a>
+  <a href="http://opdays.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">yangyang</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

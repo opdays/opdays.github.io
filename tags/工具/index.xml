@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>工具 on YangYang&#39;s Blog</title>
+    <link>http://opdays.com/tags/%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in 工具 on YangYang&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 05 Mar 2018 16:25:45 +0800</lastBuildDate>
+    
+	<atom:link href="http://opdays.com/tags/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fpm打包rpm实战</title>
+      <link>http://opdays.com/post/fpm%E6%89%93%E5%8C%85rpm%E5%AE%9E%E6%88%98/</link>
+      <pubDate>Mon, 05 Mar 2018 16:25:45 +0800</pubDate>
+      
+      <guid>http://opdays.com/post/fpm%E6%89%93%E5%8C%85rpm%E5%AE%9E%E6%88%98/</guid>
+      <description>&lt;h2 id=&#34;1-什么是fpm&#34;&gt;1 什么是fpm&lt;/h2&gt;
+
+&lt;p&gt;fpm是一个命令行工具,帮助快速构建rpm包,dpkg包,osxpkg包等&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;文档：&lt;a href=&#34;http://fpm.readthedocs.io/en/latest/intro.html&#34;&gt;详细文档&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux技巧积累</title>
+      <link>http://opdays.com/post/linux%E6%8A%80%E5%B7%A7%E7%A7%AF%E7%B4%AF/</link>
+      <pubDate>Mon, 25 Dec 2017 15:13:00 +0800</pubDate>
+      
+      <guid>http://opdays.com/post/linux%E6%8A%80%E5%B7%A7%E7%A7%AF%E7%B4%AF/</guid>
+      <description>&lt;h1 id=&#34;1-系统运维服务器故障排查&#34;&gt;1 系统运维服务器故障排查&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;统计服务器tcp连接状态数&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ss -ant&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;{a[$1]++}END{for(i in a)print a[i],i}&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# 记住a为awk关联数组 索引为$1 值为数量，for(i in a)用索引遍历数组 i为索引a[i]为 i出现的次数&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
