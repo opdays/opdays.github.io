@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on YangYang&#39;s Blog</title>
-    <link>http://opdays.com/categories/</link>
+    <link>http://opdays.github.io/categories/</link>
     <description>Recent content in Categories on YangYang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	<atom:link href="http://opdays.com/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://opdays.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>云计算</title>
-      <link>http://opdays.com/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/</link>
+      <link>http://opdays.github.io/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/</link>
       <pubDate>Thu, 14 Mar 2019 17:34:12 +0800</pubDate>
       
-      <guid>http://opdays.com/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/</guid>
+      <guid>http://opdays.github.io/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/</guid>
       <description></description>
     </item>
     
     <item>
       <title>开发</title>
-      <link>http://opdays.com/categories/%E5%BC%80%E5%8F%91/</link>
+      <link>http://opdays.github.io/categories/%E5%BC%80%E5%8F%91/</link>
       <pubDate>Mon, 31 Dec 2018 15:12:37 +0800</pubDate>
       
-      <guid>http://opdays.com/categories/%E5%BC%80%E5%8F%91/</guid>
+      <guid>http://opdays.github.io/categories/%E5%BC%80%E5%8F%91/</guid>
       <description></description>
     </item>
     
     <item>
       <title>系统运维</title>
-      <link>http://opdays.com/categories/%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/</link>
+      <link>http://opdays.github.io/categories/%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/</link>
       <pubDate>Mon, 05 Mar 2018 16:25:45 +0800</pubDate>
       
-      <guid>http://opdays.com/categories/%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/</guid>
+      <guid>http://opdays.github.io/categories/%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/</guid>
       <description></description>
     </item>
     

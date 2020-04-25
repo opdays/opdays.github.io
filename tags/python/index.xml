@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>python on YangYang&#39;s Blog</title>
-    <link>http://opdays.com/tags/python/</link>
+    <link>http://opdays.github.io/tags/python/</link>
     <description>Recent content in python on YangYang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 28 Dec 2017 13:38:56 +0800</lastBuildDate>
     
-	<atom:link href="http://opdays.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://opdays.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>python3.5新语法</title>
-      <link>http://opdays.com/post/python/python3.5%E6%96%B0%E8%AF%AD%E6%B3%95/</link>
+      <link>http://opdays.github.io/post/python/python3.5%E6%96%B0%E8%AF%AD%E6%B3%95/</link>
       <pubDate>Thu, 28 Dec 2017 13:38:56 +0800</pubDate>
       
-      <guid>http://opdays.com/post/python/python3.5%E6%96%B0%E8%AF%AD%E6%B3%95/</guid>
+      <guid>http://opdays.github.io/post/python/python3.5%E6%96%B0%E8%AF%AD%E6%B3%95/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;python3.5用了差不多一年了 和2.7有什么差别呢 就知道一个print,马丹的直接去官网看看去&lt;/p&gt;
 &lt;/blockquote&gt;

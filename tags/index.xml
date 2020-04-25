@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on YangYang&#39;s Blog</title>
-    <link>http://opdays.com/tags/</link>
+    <link>http://opdays.github.io/tags/</link>
     <description>Recent content in Tags on YangYang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 05 Mar 2018 16:25:45 +0800</lastBuildDate>
     
-	<atom:link href="http://opdays.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://opdays.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Linux</title>
-      <link>http://opdays.com/tags/linux/</link>
+      <link>http://opdays.github.io/tags/linux/</link>
       <pubDate>Mon, 05 Mar 2018 16:25:45 +0800</pubDate>
       
-      <guid>http://opdays.com/tags/linux/</guid>
+      <guid>http://opdays.github.io/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>golang</title>
-      <link>http://opdays.com/tags/golang/</link>
+      <link>http://opdays.github.io/tags/golang/</link>
       <pubDate>Mon, 25 Dec 2017 15:13:07 +0800</pubDate>
       
-      <guid>http://opdays.com/tags/golang/</guid>
+      <guid>http://opdays.github.io/tags/golang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>k8s</title>
-      <link>http://opdays.com/tags/k8s/</link>
+      <link>http://opdays.github.io/tags/k8s/</link>
       <pubDate>Mon, 31 Dec 2018 15:12:37 +0800</pubDate>
       
-      <guid>http://opdays.com/tags/k8s/</guid>
+      <guid>http://opdays.github.io/tags/k8s/</guid>
       <description></description>
     </item>
     
     <item>
       <title>prometheus</title>
-      <link>http://opdays.com/tags/prometheus/</link>
+      <link>http://opdays.github.io/tags/prometheus/</link>
       <pubDate>Thu, 14 Mar 2019 17:34:12 +0800</pubDate>
       
-      <guid>http://opdays.com/tags/prometheus/</guid>
+      <guid>http://opdays.github.io/tags/prometheus/</guid>
       <description></description>
     </item>
     
     <item>
       <title>python</title>
-      <link>http://opdays.com/tags/python/</link>
+      <link>http://opdays.github.io/tags/python/</link>
       <pubDate>Thu, 28 Dec 2017 13:38:56 +0800</pubDate>
       
-      <guid>http://opdays.com/tags/python/</guid>
+      <guid>http://opdays.github.io/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>工具</title>
-      <link>http://opdays.com/tags/%E5%B7%A5%E5%85%B7/</link>
+      <link>http://opdays.github.io/tags/%E5%B7%A5%E5%85%B7/</link>
       <pubDate>Mon, 05 Mar 2018 16:25:45 +0800</pubDate>
       
-      <guid>http://opdays.com/tags/%E5%B7%A5%E5%85%B7/</guid>
+      <guid>http://opdays.github.io/tags/%E5%B7%A5%E5%85%B7/</guid>
       <description></description>
     </item>
     

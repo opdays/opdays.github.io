@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>golang on YangYang&#39;s Blog</title>
-    <link>http://opdays.com/tags/golang/</link>
+    <link>http://opdays.github.io/tags/golang/</link>
     <description>Recent content in golang on YangYang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 25 Dec 2017 15:13:07 +0800</lastBuildDate>
     
-	<atom:link href="http://opdays.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://opdays.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>golang编译技巧</title>
-      <link>http://opdays.com/post/golang/golang%E6%8A%80%E5%B7%A7%E7%A7%AF%E7%B4%AF/</link>
+      <title>go编译技巧</title>
+      <link>http://opdays.github.io/post/golang/go%E6%8A%80%E5%B7%A7%E7%A7%AF%E7%B4%AF/</link>
       <pubDate>Mon, 25 Dec 2017 15:13:07 +0800</pubDate>
       
-      <guid>http://opdays.com/post/golang/golang%E6%8A%80%E5%B7%A7%E7%A7%AF%E7%B4%AF/</guid>
+      <guid>http://opdays.github.io/post/golang/go%E6%8A%80%E5%B7%A7%E7%A7%AF%E7%B4%AF/</guid>
       <description>一、交叉编译 linux下编译windows的可执行文件 1 GOOS=&amp;#34;windows&amp;#34; GOEXE=&amp;#34;.exe&amp;#34; go build win下编译linux的可执行文件 1 2 3 set GOOS=&amp;#34;linux&amp;#34; set GOARCH=&amp;#34;amd64&amp;#34; go build 二、条件编译 条件编译 1 使</description>
     </item>
     

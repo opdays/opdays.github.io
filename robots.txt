@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: http://opdays.com/sitemap.xml
+Sitemap: http://opdays.github.io/sitemap.xml

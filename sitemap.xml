@@ -1,148 +1,148 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<?xml-stylesheet type="text/xsl" href="http://opdays.com/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="http://opdays.github.io/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://opdays.com/about/</loc>
+    <loc>http://opdays.github.io/about/</loc>
     <lastmod>2017-12-24T12:44:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://opdays.com/post/prometheus-%E6%A0%87%E7%AD%BE%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</loc>
+    <loc>http://opdays.github.io/post/prometheus-%E6%A0%87%E7%AD%BE%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</loc>
     <lastmod>2019-03-14T17:34:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://opdays.com/post/prometheus%E8%BF%9C%E7%A8%8B%E8%AF%BB%E5%86%99influxdb/</loc>
+    <loc>http://opdays.github.io/post/prometheus%E8%BF%9C%E7%A8%8B%E8%AF%BB%E5%86%99influxdb/</loc>
     <lastmod>2019-03-09T17:34:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://opdays.com/post/websocket%E5%AE%9E%E7%8E%B0k8s%E5%AE%B9%E5%99%A8%E7%BB%88%E7%AB%AF/</loc>
+    <loc>http://opdays.github.io/post/websocket%E5%AE%9E%E7%8E%B0k8s%E5%AE%B9%E5%99%A8%E7%BB%88%E7%AB%AF/</loc>
     <lastmod>2018-12-31T15:12:37+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://opdays.com/post/fpm%E6%89%93%E5%8C%85rpm%E5%AE%9E%E6%88%98/</loc>
+    <loc>http://opdays.github.io/post/fpm%E6%89%93%E5%8C%85rpm%E5%AE%9E%E6%88%98/</loc>
     <lastmod>2018-03-05T16:25:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://opdays.com/post/python/python3.5%E6%96%B0%E8%AF%AD%E6%B3%95/</loc>
+    <loc>http://opdays.github.io/post/python/python3.5%E6%96%B0%E8%AF%AD%E6%B3%95/</loc>
     <lastmod>2017-12-28T13:38:56+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://opdays.com/post/golang/golang%E6%8A%80%E5%B7%A7%E7%A7%AF%E7%B4%AF/</loc>
+    <loc>http://opdays.github.io/post/golang/go%E6%8A%80%E5%B7%A7%E7%A7%AF%E7%B4%AF/</loc>
     <lastmod>2017-12-25T15:13:07+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://opdays.com/post/linux%E6%8A%80%E5%B7%A7%E7%A7%AF%E7%B4%AF/</loc>
+    <loc>http://opdays.github.io/post/linux%E6%8A%80%E5%B7%A7%E7%A7%AF%E7%B4%AF/</loc>
     <lastmod>2017-12-25T15:13:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://opdays.com/categories/</loc>
+    <loc>http://opdays.github.io/categories/</loc>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://opdays.com/tags/linux/</loc>
+    <loc>http://opdays.github.io/tags/linux/</loc>
     <lastmod>2018-03-05T16:25:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://opdays.com/post/</loc>
+    <loc>http://opdays.github.io/post/</loc>
     <lastmod>2019-03-14T17:34:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://opdays.com/tags/</loc>
+    <loc>http://opdays.github.io/tags/</loc>
     <lastmod>2018-03-05T16:25:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://opdays.com/</loc>
+    <loc>http://opdays.github.io/</loc>
     <lastmod>2017-12-24T12:44:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://opdays.com/tags/golang/</loc>
+    <loc>http://opdays.github.io/tags/golang/</loc>
     <lastmod>2017-12-25T15:13:07+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://opdays.com/tags/k8s/</loc>
+    <loc>http://opdays.github.io/tags/k8s/</loc>
     <lastmod>2018-12-31T15:12:37+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://opdays.com/tags/prometheus/</loc>
+    <loc>http://opdays.github.io/tags/prometheus/</loc>
     <lastmod>2019-03-14T17:34:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://opdays.com/tags/python/</loc>
+    <loc>http://opdays.github.io/tags/python/</loc>
     <lastmod>2017-12-28T13:38:56+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://opdays.com/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/</loc>
+    <loc>http://opdays.github.io/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/</loc>
     <lastmod>2019-03-14T17:34:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://opdays.com/tags/%E5%B7%A5%E5%85%B7/</loc>
+    <loc>http://opdays.github.io/tags/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2018-03-05T16:25:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://opdays.com/categories/%E5%BC%80%E5%8F%91/</loc>
+    <loc>http://opdays.github.io/categories/%E5%BC%80%E5%8F%91/</loc>
     <lastmod>2018-12-31T15:12:37+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://opdays.com/categories/%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/</loc>
+    <loc>http://opdays.github.io/categories/%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/</loc>
     <lastmod>2018-03-05T16:25:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>

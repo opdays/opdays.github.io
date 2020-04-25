@@ -2,57 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>YangYang&#39;s Blog</title>
-    <link>http://opdays.com/</link>
+    <link>http://opdays.github.io/</link>
     <description>Recent content on YangYang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 24 Dec 2017 12:44:30 +0800</lastBuildDate>
     
-	<atom:link href="http://opdays.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://opdays.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>关于</title>
-      <link>http://opdays.com/about/</link>
+      <link>http://opdays.github.io/about/</link>
       <pubDate>Sun, 24 Dec 2017 12:44:30 +0800</pubDate>
       
-      <guid>http://opdays.com/about/</guid>
-      <description>建站时间:2017-12-24🤡 key value Name 杨洋 QQ 584089958</description>
+      <guid>http://opdays.github.io/about/</guid>
+      <description>建站时间:2017-12-24🤡 key value Name 杨洋 QQ 584089958 计算机0互联网学习笔记，运维开发技术积累</description>
     </item>
     
     <item>
       <title>Prometheus 标签生命周期</title>
-      <link>http://opdays.com/post/prometheus-%E6%A0%87%E7%AD%BE%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</link>
+      <link>http://opdays.github.io/post/prometheus-%E6%A0%87%E7%AD%BE%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</link>
       <pubDate>Thu, 14 Mar 2019 17:34:12 +0800</pubDate>
       
-      <guid>http://opdays.com/post/prometheus-%E6%A0%87%E7%AD%BE%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</guid>
+      <guid>http://opdays.github.io/post/prometheus-%E6%A0%87%E7%AD%BE%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</guid>
       <description>一、Prometheus 时间序列介绍 time series 时间序列，由指标名(metric name)和标签组成(key value pairs， labels) 比如 1 2 &amp;lt;metric name&amp;gt;{&amp;lt;label name&amp;gt;=&amp;lt;label value&amp;gt;, ...} api_http_requests_total{method=&amp;#34;POST&amp;#34;, handler=&amp;#34;/messages&amp;#34;} 标</description>
     </item>
     
     <item>
       <title>Prometheus 远程读写 Influxdb</title>
-      <link>http://opdays.com/post/prometheus%E8%BF%9C%E7%A8%8B%E8%AF%BB%E5%86%99influxdb/</link>
+      <link>http://opdays.github.io/post/prometheus%E8%BF%9C%E7%A8%8B%E8%AF%BB%E5%86%99influxdb/</link>
       <pubDate>Sat, 09 Mar 2019 17:34:12 +0800</pubDate>
       
-      <guid>http://opdays.com/post/prometheus%E8%BF%9C%E7%A8%8B%E8%AF%BB%E5%86%99influxdb/</guid>
+      <guid>http://opdays.github.io/post/prometheus%E8%BF%9C%E7%A8%8B%E8%AF%BB%E5%86%99influxdb/</guid>
       <description>一、Prometheus 介绍 Prometheus 是一款开源时序数据监控系统，SoundCloud 2012年使用Go语言开发出来，该项目受到很多公司和组织的欢迎</description>
     </item>
     
     <item>
       <title>Websocket实现k8s容器终端</title>
-      <link>http://opdays.com/post/websocket%E5%AE%9E%E7%8E%B0k8s%E5%AE%B9%E5%99%A8%E7%BB%88%E7%AB%AF/</link>
+      <link>http://opdays.github.io/post/websocket%E5%AE%9E%E7%8E%B0k8s%E5%AE%B9%E5%99%A8%E7%BB%88%E7%AB%AF/</link>
       <pubDate>Mon, 31 Dec 2018 15:12:37 +0800</pubDate>
       
-      <guid>http://opdays.com/post/websocket%E5%AE%9E%E7%8E%B0k8s%E5%AE%B9%E5%99%A8%E7%BB%88%E7%AB%AF/</guid>
+      <guid>http://opdays.github.io/post/websocket%E5%AE%9E%E7%8E%B0k8s%E5%AE%B9%E5%99%A8%E7%BB%88%E7%AB%AF/</guid>
       <description>前言 k8s dashboard有实现web terminal的源代码，但是是使用sockjs实现的 实现 数据流向大概就是这样浏览器websocket -&amp;gt;</description>
     </item>
     
     <item>
       <title>Fpm打包rpm实战</title>
-      <link>http://opdays.com/post/fpm%E6%89%93%E5%8C%85rpm%E5%AE%9E%E6%88%98/</link>
+      <link>http://opdays.github.io/post/fpm%E6%89%93%E5%8C%85rpm%E5%AE%9E%E6%88%98/</link>
       <pubDate>Mon, 05 Mar 2018 16:25:45 +0800</pubDate>
       
-      <guid>http://opdays.com/post/fpm%E6%89%93%E5%8C%85rpm%E5%AE%9E%E6%88%98/</guid>
+      <guid>http://opdays.github.io/post/fpm%E6%89%93%E5%8C%85rpm%E5%AE%9E%E6%88%98/</guid>
       <description>&lt;h2 id=&#34;1-什么是fpm&#34;&gt;1 什么是fpm&lt;/h2&gt;
 
 &lt;p&gt;fpm是一个命令行工具,帮助快速构建rpm包,dpkg包,osxpkg包等&amp;hellip;&lt;/p&gt;
@@ -62,10 +62,10 @@
     
     <item>
       <title>python3.5新语法</title>
-      <link>http://opdays.com/post/python/python3.5%E6%96%B0%E8%AF%AD%E6%B3%95/</link>
+      <link>http://opdays.github.io/post/python/python3.5%E6%96%B0%E8%AF%AD%E6%B3%95/</link>
       <pubDate>Thu, 28 Dec 2017 13:38:56 +0800</pubDate>
       
-      <guid>http://opdays.com/post/python/python3.5%E6%96%B0%E8%AF%AD%E6%B3%95/</guid>
+      <guid>http://opdays.github.io/post/python/python3.5%E6%96%B0%E8%AF%AD%E6%B3%95/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;python3.5用了差不多一年了 和2.7有什么差别呢 就知道一个print,马丹的直接去官网看看去&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -80,20 +80,20 @@
     </item>
     
     <item>
-      <title>golang编译技巧</title>
-      <link>http://opdays.com/post/golang/golang%E6%8A%80%E5%B7%A7%E7%A7%AF%E7%B4%AF/</link>
+      <title>go编译技巧</title>
+      <link>http://opdays.github.io/post/golang/go%E6%8A%80%E5%B7%A7%E7%A7%AF%E7%B4%AF/</link>
       <pubDate>Mon, 25 Dec 2017 15:13:07 +0800</pubDate>
       
-      <guid>http://opdays.com/post/golang/golang%E6%8A%80%E5%B7%A7%E7%A7%AF%E7%B4%AF/</guid>
+      <guid>http://opdays.github.io/post/golang/go%E6%8A%80%E5%B7%A7%E7%A7%AF%E7%B4%AF/</guid>
       <description>一、交叉编译 linux下编译windows的可执行文件 1 GOOS=&amp;#34;windows&amp;#34; GOEXE=&amp;#34;.exe&amp;#34; go build win下编译linux的可执行文件 1 2 3 set GOOS=&amp;#34;linux&amp;#34; set GOARCH=&amp;#34;amd64&amp;#34; go build 二、条件编译 条件编译 1 使</description>
     </item>
     
     <item>
       <title>Linux技巧积累</title>
-      <link>http://opdays.com/post/linux%E6%8A%80%E5%B7%A7%E7%A7%AF%E7%B4%AF/</link>
+      <link>http://opdays.github.io/post/linux%E6%8A%80%E5%B7%A7%E7%A7%AF%E7%B4%AF/</link>
       <pubDate>Mon, 25 Dec 2017 15:13:00 +0800</pubDate>
       
-      <guid>http://opdays.com/post/linux%E6%8A%80%E5%B7%A7%E7%A7%AF%E7%B4%AF/</guid>
+      <guid>http://opdays.github.io/post/linux%E6%8A%80%E5%B7%A7%E7%A7%AF%E7%B4%AF/</guid>
       <description>&lt;h1 id=&#34;1-系统运维服务器故障排查&#34;&gt;1 系统运维服务器故障排查&lt;/h1&gt;
 
 &lt;p&gt;&lt;strong&gt;统计服务器tcp连接状态数&lt;/strong&gt;&lt;/p&gt;

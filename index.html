@@ -26,9 +26,9 @@
 <meta name="generator" content="Hugo 0.53 with even 4.0.0" />
 
 
-<link rel="canonical" href="http://opdays.com/" />
-  <link href="http://opdays.com/index.xml" rel="alternate" type="application/rss+xml" title="YangYang&#39;s Blog" />
-  <link href="http://opdays.com/index.xml" rel="feed" type="application/rss+xml" title="YangYang&#39;s Blog" />
+<link rel="canonical" href="http://opdays.github.io/" />
+  <link href="http://opdays.github.io/index.xml" rel="alternate" type="application/rss+xml" title="YangYang&#39;s Blog" />
+  <link href="http://opdays.github.io/index.xml" rel="feed" type="application/rss+xml" title="YangYang&#39;s Blog" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -43,7 +43,7 @@
 <meta property="og:title" content="YangYang&#39;s Blog" />
 <meta property="og:description" content="YangYang 的个人博客" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="http://opdays.com/" />
+<meta property="og:url" content="http://opdays.github.io/" />
 <meta property="og:updated_time" content="2017-12-24T12:44:30&#43;08:00"/>
 
 <meta itemprop="name" content="YangYang&#39;s Blog">
@@ -77,13 +77,13 @@
 <nav id="mobile-menu" class="mobile-menu slideout-menu">
   <ul class="mobile-menu-list">
     <a href="/">
-        <li class="mobile-menu-item">Home</li>
+        <li class="mobile-menu-item">主页</li>
       </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
+        <li class="mobile-menu-item">归档</li>
       </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
+        <li class="mobile-menu-item">标签</li>
       </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories</li>
+        <li class="mobile-menu-item">分类</li>
       </a><a href="/about/">
         <li class="mobile-menu-item">关于</li>
       </a>
@@ -98,13 +98,13 @@
 <nav class="site-navbar">
   <ul id="menu" class="menu">
     <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
+        <a class="menu-item-link" href="/">主页</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
+        <a class="menu-item-link" href="/post/">归档</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
+        <a class="menu-item-link" href="/tags/">标签</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">Categories</a>
+        <a class="menu-item-link" href="/categories/">分类</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/about/">关于</a>
       </li>
@@ -124,6 +124,8 @@
       <div class="post-category">
           <a href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/"> 云计算 </a>
           </div>
+        <span class="more-meta"> 约 1600 字 </span>
+        <span class="more-meta"> 预计阅读 4 分钟 </span>
     </div>
   </header>
   
@@ -145,6 +147,8 @@
       <div class="post-category">
           <a href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/"> 云计算 </a>
           </div>
+        <span class="more-meta"> 约 1685 字 </span>
+        <span class="more-meta"> 预计阅读 4 分钟 </span>
     </div>
   </header>
   
@@ -166,6 +170,8 @@
       <div class="post-category">
           <a href="/categories/%E5%BC%80%E5%8F%91/"> 开发 </a>
           </div>
+        <span class="more-meta"> 约 911 字 </span>
+        <span class="more-meta"> 预计阅读 2 分钟 </span>
     </div>
   </header>
   
@@ -187,6 +193,8 @@
       <div class="post-category">
           <a href="/categories/%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/"> 系统运维 </a>
           </div>
+        <span class="more-meta"> 约 584 字 </span>
+        <span class="more-meta"> 预计阅读 2 分钟 </span>
     </div>
   </header>
   
@@ -210,6 +218,8 @@
     <div class="post-meta">
       <span class="post-time"> 2017-12-28 </span>
       
+        <span class="more-meta"> 约 306 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
     </div>
   </header>
   
@@ -233,14 +243,67 @@
   </div>
 </article>
 
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/golang/go%E6%8A%80%E5%B7%A7%E7%A7%AF%E7%B4%AF/">go编译技巧</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-12-25 </span>
+      
+        <span class="more-meta"> 约 202 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      一、交叉编译 linux下编译windows的可执行文件 1 GOOS=&#34;windows&#34; GOEXE=&#34;.exe&#34; go build win下编译linux的可执行文件 1 2 3 set GOOS=&#34;linux&#34; set GOARCH=&#34;amd64&#34; go build 二、条件编译 条件编译 1 使
+    </div>
+    <div class="read-more">
+      <a href="/post/golang/go%E6%8A%80%E5%B7%A7%E7%A7%AF%E7%B4%AF/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/linux%E6%8A%80%E5%B7%A7%E7%A7%AF%E7%B4%AF/">Linux技巧积累</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-12-25 </span>
+      <div class="post-category">
+          <a href="/categories/%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/"> 系统运维 </a>
+          </div>
+        <span class="more-meta"> 约 480 字 </span>
+        <span class="more-meta"> 预计阅读 1 分钟 </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h1 id="1-系统运维服务器故障排查">1 系统运维服务器故障排查</h1>
+
+<p><strong>统计服务器tcp连接状态数</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ss -ant<span class="p">|</span>awk <span class="s1">&#39;{a[$1]++}END{for(i in a)print a[i],i}&#39;</span>
+<span class="c1"># 记住a为awk关联数组 索引为$1 值为数量，for(i in a)用索引遍历数组 i为索引a[i]为 i出现的次数</span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+    <div class="read-more">
+      <a href="/post/linux%E6%8A%80%E5%B7%A7%E7%A7%AF%E7%B4%AF/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
     </section>
   
   <nav class="pagination">
     
-    <a class="next" href="/page/2/">
-        <span class="next-text">下一页</span>
-        <i class="iconfont icon-right"></i>
-      </a>
+    
   </nav>
         </div>
         
@@ -251,7 +314,7 @@
     <footer id="footer" class="footer">
       <div class="social-links">
       <a href="https://github.com/opdays" class="iconfont icon-github" title="github"></a>
-  <a href="http://opdays.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  <a href="http://opdays.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
 
 <div class="copyright">
