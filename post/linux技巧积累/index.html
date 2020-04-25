@@ -17,7 +17,7 @@
 
 
 <meta name="author" content="yangyang" /><meta name="description" content="1 系统运维服务器故障排查 统计服务器tcp连接状态数
-1 2  ss -ant|awk &amp;#39;{a[$1]&#43;&#43;}END{for(i in a)print a[i],i}&amp;#39; # 记住a为awk关联数组 索引为$1 值为数量，for(i in a)用索引遍历数组 i为索引a[i]为 i出现的次数  " /><meta name="keywords" content="Hugo, theme, yangyang" />
+1 2  ss -ant|awk &amp;#39;{a[$1]&#43;&#43;}END{for(i in a)print a[i],i}&amp;#39; # 记住a为awk关联数组 索引为$1 值为数量，for(i in a)用索引遍历数组 i为索引a[i]为 i出现的次数  " /><meta name="keywords" content="Hugo, YangYang, yangyang, 运维开发" />
 
 
 
@@ -381,7 +381,23 @@ resize2fs /dev/vggroup/vl_root <span class="c1">#重置文件系统</span></code
     </footer>
   </article>
         </div>
-        
+        <div id="gitalk-container"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var gitalk = new Gitalk({
+        id: '2017-12-25 15:13:00 \x2b0800 CST',
+        title: 'Linux技巧积累',
+        clientID: '238ba595dddb7f1cf2e6',
+        clientSecret: 'e8c1e06c5f63fb851631b2b2871b2c8a319b23ee',
+        repo: 'gitalk-comment',
+        owner: 'opdays',
+        admin: ['opdays'],
+        body: decodeURI(location.href)
+      });
+      gitalk.render('gitalk-container');
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
 
       </div>
     </main>
