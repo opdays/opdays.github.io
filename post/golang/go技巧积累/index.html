@@ -34,7 +34,7 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.a0f8257c.min.css" rel="stylesheet">
+<link href="/dist/even.6169bc21.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -158,23 +158,23 @@
 <p>linux下编译windows的可执行文件</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
-</span></code></pre></td>
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">GOOS</span><span class="o">=</span><span class="s2">&#34;windows&#34;</span> <span class="nv">GOEXE</span><span class="o">=</span><span class="s2">&#34;.exe&#34;</span> go build</code></pre></td></tr></table>
+<pre class="chroma">GOOS=&#34;windows&#34; GOEXE=&#34;.exe&#34; go build</pre></td></tr></table>
 </div>
 </div>
 <p>win下编译linux的可执行文件</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span></code></pre></td>
+</span></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">set</span> <span class="nv">GOOS</span><span class="o">=</span><span class="s2">&#34;linux&#34;</span>
-<span class="nb">set</span> <span class="nv">GOARCH</span><span class="o">=</span><span class="s2">&#34;amd64&#34;</span>
-go build</code></pre></td></tr></table>
+<pre class="chroma">set GOOS=&#34;linux&#34;
+set GOARCH=&#34;amd64&#34;
+go build</pre></td></tr></table>
 </div>
 </div>
 <h1 id="二-条件编译">二、条件编译</h1>
@@ -212,12 +212,12 @@ go build</code></pre></td></tr></table>
 <h2 id="2-文件后缀">2 文件后缀</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="lnt">1
+<pre class="chroma"><span class="lnt">1
 </span><span class="lnt">2
-</span></code></pre></td>
+</span></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">mypkg_linux</span><span class="p">.</span><span class="k">go</span>         <span class="c1">// only builds on linux systems
-</span><span class="c1"></span><span class="nx">mypkg_windows_amd64</span><span class="p">.</span><span class="k">go</span> <span class="o">//</span> <span class="nx">only</span> <span class="nx">builds</span> <span class="nx">on</span> <span class="nx">windows</span> <span class="mi">64</span><span class="nx">bit</span> <span class="nx">platforms</span></code></pre></td></tr></table>
+<pre class="chroma">mypkg_linux.go         // only builds on linux systems
+mypkg_windows_amd64.go // only builds on windows 64bit platforms</pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -311,7 +311,7 @@ go build</code></pre></td></tr></table>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
+<script type="text/javascript" src="/dist/even.5d494381.min.js"></script>
 
 
 

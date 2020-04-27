@@ -34,7 +34,7 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.a0f8257c.min.css" rel="stylesheet">
+<link href="/dist/even.6169bc21.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2019-03-09T17:34:12&#43;08:00" />
 <meta itemprop="dateModified" content="2019-03-09T17:34:12&#43;08:00" />
-<meta itemprop="wordCount" content="1685">
+<meta itemprop="wordCount" content="1681">
 
 
 
@@ -131,7 +131,7 @@
         <div class="post-category">
             <a href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/"> 云计算 </a>
             </div>
-          <span class="more-meta"> 约 1685 字 </span>
+          <span class="more-meta"> 约 1681 字 </span>
           <span class="more-meta"> 预计阅读 4 分钟 </span>
         
       </div>
@@ -271,18 +271,18 @@ systemctl start influxdb</code></pre></td></tr></table>
 <p>创建数据库</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code class="language-terminfo" data-lang="terminfo"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># influx</span>
-Connected to http://localhost:8086 version <span class="m">1</span>.7.4
-InfluxDB shell version: <span class="m">1</span>.7.4
-Enter an InfluxQL query
-&gt; create database prometheus</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-terminfo" data-lang="terminfo"><span class="c"># influx</span><span class="err">
+</span><span class="err"></span><span class="nt">Connected</span><span class="na"> to http://localhost:8086 version 1.7.4
+</span><span class="na">InfluxDB shell version: 1.7.4
+</span><span class="na">Enter an InfluxQL query
+</span><span class="na">&gt; create database prometheus</span></code></pre></td></tr></table>
 </div>
 </div>
 <h3 id="2-修改prometheus写入influxdb的prometheus库">2 修改Prometheus写入influxdb的Prometheus库</h3>
@@ -297,10 +297,10 @@ Enter an InfluxQL query
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code class="language-terminfo" data-lang="terminfo"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">kill</span> -1 pid</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-terminfo" data-lang="terminfo"><span class="nt">kill</span><span class="na"> -1 pid</span></code></pre></td></tr></table>
 </div>
 </div>
 <h3 id="3-查看influxdb的prometheus库">3 查看influxdb的Prometheus库</h3>
@@ -308,7 +308,7 @@ Enter an InfluxQL query
 <p>influxdb库下面是measurement，类似mysql的table</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt"> 1
+<pre class="chroma"><code class="language-terminfo" data-lang="terminfo"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -341,54 +341,54 @@ Enter an InfluxQL query
 </span><span class="lnt">31
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">&gt; show measurements
-name: measurements
-name
-----
-ALERTS
-ALERTS_FOR_STATE
-go_gc_duration_seconds
-go_gc_duration_seconds_count
-go_gc_duration_seconds_sum
-go_goroutines
-go_memstats_alloc_bytes
-go_memstats_alloc_bytes_total
-go_memstats_buck_hash_sys_bytes
-go_memstats_frees_total
-go_memstats_gc_sys_bytes
-go_memstats_heap_alloc_bytes
-go_memstats_heap_idle_bytes
-go_memstats_heap_inuse_bytes
-go_memstats_heap_objects
-go_memstats_heap_released_bytes
-go_memstats_heap_sys_bytes
-go_memstats_last_gc_time_seconds
-go_memstats_lookups_total
-go_memstats_mallocs_total
-go_memstats_mcache_inuse_bytes
-go_memstats_mcache_sys_bytes
-go_memstats_mspan_inuse_bytes
-go_memstats_mspan_sys_bytes
-go_memstats_next_gc_bytes
-go_memstats_other_sys_bytes
-go_memstats_stack_inuse_bytes</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-terminfo" data-lang="terminfo"><span class="nt">&gt;</span><span class="na"> show measurements
+</span><span class="na">name: measurements
+</span><span class="na">name
+</span><span class="na">----
+</span><span class="na">ALERTS
+</span><span class="na">ALERTS_FOR_STATE
+</span><span class="na">go_gc_duration_seconds
+</span><span class="na">go_gc_duration_seconds_count
+</span><span class="na">go_gc_duration_seconds_sum
+</span><span class="na">go_goroutines
+</span><span class="na">go_memstats_alloc_bytes
+</span><span class="na">go_memstats_alloc_bytes_total
+</span><span class="na">go_memstats_buck_hash_sys_bytes
+</span><span class="na">go_memstats_frees_total
+</span><span class="na">go_memstats_gc_sys_bytes
+</span><span class="na">go_memstats_heap_alloc_bytes
+</span><span class="na">go_memstats_heap_idle_bytes
+</span><span class="na">go_memstats_heap_inuse_bytes
+</span><span class="na">go_memstats_heap_objects
+</span><span class="na">go_memstats_heap_released_bytes
+</span><span class="na">go_memstats_heap_sys_bytes
+</span><span class="na">go_memstats_last_gc_time_seconds
+</span><span class="na">go_memstats_lookups_total
+</span><span class="na">go_memstats_mallocs_total
+</span><span class="na">go_memstats_mcache_inuse_bytes
+</span><span class="na">go_memstats_mcache_sys_bytes
+</span><span class="na">go_memstats_mspan_inuse_bytes
+</span><span class="na">go_memstats_mspan_sys_bytes
+</span><span class="na">go_memstats_next_gc_bytes
+</span><span class="na">go_memstats_other_sys_bytes
+</span><span class="na">go_memstats_stack_inuse_bytes</span></code></pre></td></tr></table>
 </div>
 </div>
 <p>可以看到Prometheus里面的指标名被转换成measurement</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span></code></pre></td>
+</span></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">&gt; <span class="k">select</span> * from go_gc_duration_seconds limit <span class="m">1</span>
+<pre class="chroma">&gt; select * from go_gc_duration_seconds limit 1
 name: go_gc_duration_seconds
-<span class="nb">time</span>                __name__               cvm_id env group hostname            instance        ip         job monitor_group object qcloud_id    quantile replica role  value
+time                __name__               cvm_id env group hostname            instance        ip         job monitor_group object qcloud_id    quantile replica role  value
 ----                --------               ------ --- ----- --------            --------        --         --- ------------- ------ ---------    -------- ------- ----  -----
-<span class="m">1552111190174000000</span> go_gc_duration_seconds <span class="m">613</span>    dev xx    xx x.x.x.x:9100 x.x.x.x cvm empty         cvm    xxx-xxxxx <span class="m">0</span>        A       basic <span class="m">0</span>.000062953</code></pre></td></tr></table>
+1552111190174000000 go_gc_duration_seconds 613    dev xx    xx x.x.x.x:9100 x.x.x.x cvm empty         cvm    xxx-xxxxx 0        A       basic 0.000062953</pre></td></tr></table>
 </div>
 </div>
 <p>prometheus的label，被转为influxdb的tags，值转为fields，value=000062953</p>
@@ -531,7 +531,7 @@ fields
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
+<script type="text/javascript" src="/dist/even.5d494381.min.js"></script>
 
 
 

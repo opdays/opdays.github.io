@@ -34,7 +34,7 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.a0f8257c.min.css" rel="stylesheet">
+<link href="/dist/even.6169bc21.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2019-03-14T17:34:12&#43;08:00" />
 <meta itemprop="dateModified" content="2019-03-14T17:34:12&#43;08:00" />
-<meta itemprop="wordCount" content="1600">
+<meta itemprop="wordCount" content="1601">
 
 
 
@@ -131,7 +131,7 @@
         <div class="post-category">
             <a href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97/"> 云计算 </a>
             </div>
-          <span class="more-meta"> 约 1600 字 </span>
+          <span class="more-meta"> 约 1601 字 </span>
           <span class="more-meta"> 预计阅读 4 分钟 </span>
         
       </div>
@@ -194,7 +194,7 @@ api_http_requests_total{method=&#34;POST&#34;, handler=&#34;/messages&#34;}</pre
 <p>一个抓取配置是怎么配置的</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="lnt"> 1
+<pre class="chroma"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -242,56 +242,56 @@ api_http_requests_total{method=&#34;POST&#34;, handler=&#34;/messages&#34;}</pre
 </span><span class="lnt">46
 </span><span class="lnt">47
 </span><span class="lnt">48
-</span></code></pre></td>
+</span></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml">job_name<span class="p">:</span><span class="w"> </span>&lt;job_name<span class="sd">&gt;
-</span><span class="sd">[ scrape_interval: &lt;duration&gt; | default = &lt;global_config.scrape_interval&gt; ]
-</span><span class="sd">[ scrape_timeout: &lt;duration&gt; | default = &lt;global_config.scrape_timeout&gt; ]
-</span><span class="sd">[ metrics_path: &lt;path&gt; | default = /metrics ]
-</span><span class="sd">[ honor_labels: &lt;boolean&gt; | default = false ]
-</span><span class="sd">[ scheme: &lt;scheme&gt; | default = http ]
-</span><span class="sd">params:
-</span><span class="sd">  [ &lt;string&gt;: [&lt;string&gt;, ...] ]
-</span><span class="sd">basic_auth:
-</span><span class="sd">  [ username: &lt;string&gt; ]
-</span><span class="sd">  [ password: &lt;secret&gt; ]
-</span><span class="sd">  [ password_file: &lt;string&gt; ]
-</span><span class="sd">[ bearer_token: &lt;secret&gt; ]
-</span><span class="sd">[ bearer_token_file: /path/to/bearer/token/file ]
-</span><span class="sd">tls_config:
-</span><span class="sd">  [ &lt;tls_config&gt; ]
-</span><span class="sd">[ proxy_url: &lt;string&gt; ]
-</span><span class="sd">azure_sd_configs:
-</span><span class="sd">  [ - &lt;azure_sd_config&gt; ... ]
-</span><span class="sd">consul_sd_configs:
-</span><span class="sd">  [ - &lt;consul_sd_config&gt; ... ]
-</span><span class="sd">dns_sd_configs:
-</span><span class="sd">  [ - &lt;dns_sd_config&gt; ... ]
-</span><span class="sd">ec2_sd_configs:
-</span><span class="sd">  [ - &lt;ec2_sd_config&gt; ... ]
-</span><span class="sd">openstack_sd_configs:
-</span><span class="sd">  [ - &lt;openstack_sd_config&gt; ... ]
-</span><span class="sd">file_sd_configs:
-</span><span class="sd">  [ - &lt;file_sd_config&gt; ... ]
-</span><span class="sd">gce_sd_configs:
-</span><span class="sd">  [ - &lt;gce_sd_config&gt; ... ]
-</span><span class="sd">kubernetes_sd_configs:
-</span><span class="sd">  [ - &lt;kubernetes_sd_config&gt; ... ]
-</span><span class="sd">marathon_sd_configs:
-</span><span class="sd">  [ - &lt;marathon_sd_config&gt; ... ]
-</span><span class="sd">nerve_sd_configs:
-</span><span class="sd">  [ - &lt;nerve_sd_config&gt; ... ]
-</span><span class="sd">serverset_sd_configs:
-</span><span class="sd">  [ - &lt;serverset_sd_config&gt; ... ]
-</span><span class="sd">triton_sd_configs:
-</span><span class="sd">  [ - &lt;triton_sd_config&gt; ... ]
-</span><span class="sd">static_configs:
-</span><span class="sd">  [ - &lt;static_config&gt; ... ]
-</span><span class="sd">relabel_configs:
-</span><span class="sd">  [ - &lt;relabel_config&gt; ... ]
-</span><span class="sd">metric_relabel_configs:
-</span><span class="sd">  [ - &lt;relabel_config&gt; ... ]
-</span><span class="sd">[ sample_limit: &lt;int&gt; | default = 0 ]</span></code></pre></td></tr></table>
+<pre class="chroma">job_name: &lt;job_name&gt;
+[ scrape_interval: &lt;duration&gt; | default = &lt;global_config.scrape_interval&gt; ]
+[ scrape_timeout: &lt;duration&gt; | default = &lt;global_config.scrape_timeout&gt; ]
+[ metrics_path: &lt;path&gt; | default = /metrics ]
+[ honor_labels: &lt;boolean&gt; | default = false ]
+[ scheme: &lt;scheme&gt; | default = http ]
+params:
+  [ &lt;string&gt;: [&lt;string&gt;, ...] ]
+basic_auth:
+  [ username: &lt;string&gt; ]
+  [ password: &lt;secret&gt; ]
+  [ password_file: &lt;string&gt; ]
+[ bearer_token: &lt;secret&gt; ]
+[ bearer_token_file: /path/to/bearer/token/file ]
+tls_config:
+  [ &lt;tls_config&gt; ]
+[ proxy_url: &lt;string&gt; ]
+azure_sd_configs:
+  [ - &lt;azure_sd_config&gt; ... ]
+consul_sd_configs:
+  [ - &lt;consul_sd_config&gt; ... ]
+dns_sd_configs:
+  [ - &lt;dns_sd_config&gt; ... ]
+ec2_sd_configs:
+  [ - &lt;ec2_sd_config&gt; ... ]
+openstack_sd_configs:
+  [ - &lt;openstack_sd_config&gt; ... ]
+file_sd_configs:
+  [ - &lt;file_sd_config&gt; ... ]
+gce_sd_configs:
+  [ - &lt;gce_sd_config&gt; ... ]
+kubernetes_sd_configs:
+  [ - &lt;kubernetes_sd_config&gt; ... ]
+marathon_sd_configs:
+  [ - &lt;marathon_sd_config&gt; ... ]
+nerve_sd_configs:
+  [ - &lt;nerve_sd_config&gt; ... ]
+serverset_sd_configs:
+  [ - &lt;serverset_sd_config&gt; ... ]
+triton_sd_configs:
+  [ - &lt;triton_sd_config&gt; ... ]
+static_configs:
+  [ - &lt;static_config&gt; ... ]
+relabel_configs:
+  [ - &lt;relabel_config&gt; ... ]
+metric_relabel_configs:
+  [ - &lt;relabel_config&gt; ... ]
+[ sample_limit: &lt;int&gt; | default = 0 ]</pre></td></tr></table>
 </div>
 </div>
 <p>Prometheus提供多种监控目标配置,一般情况我们使用静态配置或者一种发现配置就可以了</p>
@@ -505,7 +505,7 @@ api_http_requests_total{method=&#34;POST&#34;, handler=&#34;/messages&#34;}</pre
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
+<script type="text/javascript" src="/dist/even.5d494381.min.js"></script>
 
 
 
